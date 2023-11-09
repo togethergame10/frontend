@@ -1,6 +1,7 @@
 메인 페이지 - main.html
 최근 인기 게임 상세 - main_famous.html
-상황별 게임 상세 - main_alcohol.html
+상황 별 술자리 게임 상세 - main_alcohol.html
+상황 별 MT 게임 상세 - main_mt.html
 게임 검색 페이지 - search.html (만약 오류 생기면 search_game.html)
 게임 등록 페이지 - add_game.html
 마이페이지 - mypage.html
