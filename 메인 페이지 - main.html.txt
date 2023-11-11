@@ -6,4 +6,4 @@
 게임 등록 페이지 - add_game.html
 마이페이지 - mypage.html
 로그인 - login.html
-회원가입 add_user.html
+회원가입 - add_user.html
