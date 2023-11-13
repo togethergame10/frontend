@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함께임</title>
+    <link rel="stylesheet" href="../css/add_user.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a href="main.html"><img src="../img/title.png" alt="타이틀" /></a>
+      <div class="search">
+        <input type="text" /><button>
+          <img src="../img/serch.png" alt="검색" />
+        </button>
+      </div>
+    </div>
+    <hr class="background" />
+    <nav>
+      <ul class="nav-list">
+        <li class="bold"><a href="main.html">인기 게임</a></li>
+        <li><a href="search.html">게임 검색</a></li>
+        <li><a href="add_game.html">게임 등록</a></li>
+        <li><a href="mypage.html">마이페이지</a></li>
+      </ul>
+      <ul class="nav-list">
+        <li><a href="login.html">로그인</a></li>
+        <li>
+          <a href="add_user.html">회원 가입</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+
+    <div class="member">
+        <!-- 1. 회원 가입 -->
+        <p> 회원가입 </p>
+
+        <!-- 2. 필드 -->        
+        <div class="field">
+            <p>이름</p>
+            <input type="text" placeholder="이름을 입력해주세요">
+        </div>
+        <div class="field">
+            <p>이메일</p>
+            <input type="email" placeholder="abc@gmail.com">
+        </div>
+        <div class="field">
+            <p>닉네임</p>
+            <input type="text" placeholder="닉네임을 입력해주세요">
+        </div>
+        <div class="field">
+            <p>비밀번호</p>
+            <input type="password" placeholder="영문/숫자/특수문자 조합(10자 이상)">
+        </div>
+        <div class="field">
+            <p>비밀번호 확인</p>
+            <input type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+        </div>
+
+
+        <!-- 3. 서비스 약관 동의 -->
+        <label for="agree_all">
+            <input type="checkbox" name="agree_all" id="agree_all">
+            <span>전체 동의</span>
+          </label>
+          <label for="agree">
+            <input type="checkbox" name="agree" value="1">
+            <span>서비스 이용약관 동의<strong>(필수)</strong></span>
+          </label>
+          <label for="agree">
+            <input type="checkbox" name="agree" value="2">
+            <span>개인정보 수집 및 이용 동의<strong>(필수)</strong></span>
+          </label>
+
+        <!-- 4. 가입하기 버튼 -->
+        <input type="submit" value="회원가입 하기">
+
+        </div>
+  </body>
+</html>
+
+<script>
+    // 동의 모두선택 / 해제
+const agreeChkAll = document.querySelector('input[name=agree_all]');
+    agreeChkAll.addEventListener('change', (e) => {
+    let agreeChk = document.querySelectorAll('input[name=agree]');
+    for(let i = 0; i < agreeChk.length; i++){
+      agreeChk[i].checked = e.target.checked;
+    }
+});
+</script>
