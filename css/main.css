@@ -1,3 +1,10 @@
+@media (hover: hover) {
+  html {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
 html {
   background-color: rgba(251, 249, 246, 1);
 }

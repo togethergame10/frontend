@@ -1,9 +1,16 @@
+@media (hover: hover) {
+  html {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
 html {
   background-color: rgba(251, 249, 246, 1);
 }
 
 * {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
 }
 
 .nav-wrapper {
