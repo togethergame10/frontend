@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>함께임</title>
-    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/add_game.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -38,9 +38,10 @@
     </nav>
     <hr />
     
-    <h2>어떤 게임을 찾고 계시나요?</h2>
+    
     <div class="container">
       <div class="sec1">
+        <h2>게임 특징</h2>
         <div class="background">
           <div class="select-options" id="group1">
             <span>옵션 1</span>
@@ -73,128 +74,40 @@
             <button class="option" value="조건6">조건6</button>
             <button class="option" value="조건6">조건6</button>
           </div>
-        </div>
 
-        <div class="buttons">
-          <button id="game-search">검색</button>
-          <button id="reset">초기화</button>
+          <div class="select-options" id="group2">
+            <span>옵션 4</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 4</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
         </div>
       </div>
       <div class="sec2">
-        <ul>
-          <li>
-            <img src="../img/thumbnail.png" alt="thumbnail" />
-            <div class="list-info">
-              <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
-              </div>
-              <ul class="game-info">
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <img src="../img/thumbnail.png" alt="thumbnail" />
-            <div class="list-info">
-              <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
-              </div>
-              <ul class="game-info">
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <img src="../img/thumbnail.png" alt="thumbnail" />
-            <div class="list-info">
-              <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
-              </div>
-              <ul class="game-info">
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <img src="../img/thumbnail.png" alt="thumbnail" />
-            <div class="list-info">
-              <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
-              </div>
-              <ul class="game-info">
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-                <li>
-                  <span>인원</span>
-                  <p>전체</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-          
-        </ul>
+        <h2>게임 소개</h2>
+        <form action="">
+          <span>게임명</span>
+          <input type="text">
+          <span>진행준비</span>
+          <textarea name="ss" id="" cols="30" rows="10"></textarea>
+          <span>게임 방법</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <span>진행 팁 / 주의사항</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <div>
+            <input type="button" value="취소하기!">
+            <input type="submit" value="등록하기!">
+          </div>
+        </form>
       </div>
     </div>
 
