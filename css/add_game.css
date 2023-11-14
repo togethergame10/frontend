@@ -140,5 +140,14 @@ h2 {
 .sec2 form{
   display: flex;
   flex-direction: column;
-  justify-content: right;
+}
+
+.sec2 form textarea{
+  resize: none;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
