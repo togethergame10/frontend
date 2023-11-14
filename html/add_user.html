@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함께임</title>
+    <link rel="stylesheet" href="../css/add_user.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a href="main.html"><img src="../img/title.png" alt="타이틀" /></a>
+      <div class="search">
+        <input type="text" /><button>
+          <img src="../img/serch.png" alt="검색" />
+        </button>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-list">
+        <li class="bold"><a href="main.html">인기 게임</a></li>
+        <li><a href="search.html">게임 검색</a></li>
+        <li><a href="add_game.html">게임 등록</a></li>
+        <li><a href="mypage.html">마이페이지</a></li>
+      </ul>
+      <ul class="nav-list">
+        <li><a href="login.html">로그인</a></li>
+        <li>
+          <a href="add_user.html">회원 가입</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+
+    
+    <div class="member_wrapper">
+      <form
+    method="post"
+    action=""
+    id="join-form"
+    onsubmit="return join()"
+>
+        <!-- 1. 회원 가입 -->
+        <div class="member">
+        <p id="large_text"> 회원가입 </p>
+
+        <!-- 2. 필드 -->        
+        <div class="field">
+            <p>닉네임</p>
+            <input 
+            type="text" 
+            id="name" 
+            placeholder="닉네임을 입력해주세요">
+        </div>
+        <div class="field">
+            <p>이메일</p>
+            <input 
+            type="email" 
+            id="email" 
+            placeholder="abc@gmail.com">
+        </div>
+        <div class="field">
+            <p>비밀번호</p>
+            <input 
+            type="password" 
+            id="password"
+            placeholder="영문/숫자/특수문자 조합(10자 이상)">
+        </div>
+        <div class="field">
+            <p>비밀번호 확인</p>
+            <input 
+            type="password" 
+            id="password2"
+            placeholder="비밀번호를 다시 한 번 입력해주세요">
+        </div>
+      </div>
+
+        <!-- 3. 서비스 약관 동의 -->
+          <label for="agree-check">
+            <div class="check">
+            <input 
+            type="checkbox"  
+            id="total-check"
+            onclick="toggleCheckboxes()" />
+            <span id="medium_text">전체 동의</span>
+          </div>
+          <hr>
+            <div class="check">
+            <input 
+            type="checkbox" 
+            id="first-check"
+            onclick="toggleTotalCheck()"/>
+            <span>서비스 이용약관 동의(필수)</span>
+        </div>
+        <div class="check">
+            <input 
+            type="checkbox" 
+            id="second-check"
+            onclick="toggleTotalCheck()"/>
+            <span>개인정보 수집 및 이용 동의(필수)</span>
+          </div>
+          </label>
+        
+
+        <!-- 4. 회원가입 하기 버튼 -->
+        <input type="submit" value="회원가입 하기">
+      </form>
+        </div>
+        <div class="terms">
+          <div>
+          <p>
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          </p>
+        </div>
+        <div>
+          <p>
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            약관 어쩌구,.... Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          </p>
+        </div>
+        </div>
+<script>
+var totalCheckbox = document.getElementById("total-check");
+var firstCheckbox = document.getElementById("first-check");
+var secondCheckbox = document.getElementById("second-check");
+
+function toggleCheckboxes() {
+    if (totalCheckbox.checked) {
+        firstCheckbox.checked = true;
+        secondCheckbox.checked = true;
+    } else {
+        firstCheckbox.checked = false;
+        secondCheckbox.checked = false;
+    }
+}
+
+function toggleTotalCheck() {
+    if (firstCheckbox.checked && secondCheckbox.checked) {
+        totalCheckbox.checked = true;
+    } else {
+        totalCheckbox.checked = false;
+    }
+}
+
+function join() {
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var password2 = document.getElementById("password2");
+
+    if (name.value == "") {
+        alert("닉네임을 입력해주세요.");
+        name.focus();
+        return false;
+    }
+    if (email.value == "") {
+        alert("이메일을 입력해주세요.");
+        email.focus();
+        return false;
+    }
+    
+    if (password.value == "") {
+        alert("비밀번호를 입력해주세요.");
+        password.focus();
+        return false;
+    }
+    if (password.value.length < 10) {
+        alert("비밀번호는 10자 이상이어야 합니다.");
+        return false;
+    }
+    if (password2.value == "") {
+        alert("비밀번호 확인을 입력해주세요.");
+        password.focus();
+        return false;
+    }
+    if (password2.value != password.value) {
+        alert("비밀번호가 일치하지 않습니다.");
+        password2.focus();
+        return false;
+    }
+    if (totalCheckbox.checked != true) {
+        alert("서비스 약관에 동의해주세요.");
+        totalCheckbox.focus();
+        return false;
+    }
+
+    //회원가입 처리 코드
+
+    //회원가입 처리 이후
+    alert(name.value + "님 환영합니다. 회원가입이 완료되었습니다.");
+    window.location.href = "./login.html";
+    return false;0
+  };
+</script>
+  </body>
+</html>
+
+
