@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함께임</title>
+    <link rel="stylesheet" href="../css/add_game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a href="main.html"><img src="../img/title.png" alt="타이틀" /></a>
+      <div class="search">
+        <input type="text" /><button>
+          <img src="../img/serch.png" alt="검색" />
+        </button>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-list">
+        <li class="bold"><a href="main.html">인기 게임</a></li>
+        <li><a href="search.html">게임 검색</a></li>
+        <li><a href="add_game.html">게임 등록</a></li>
+        <li><a href="mypage.html">마이페이지</a></li>
+      </ul>
+      <ul class="nav-list">
+        <li><a href="login.html">로그인</a></li>
+        <li>
+          <a href="add_user.html">회원 가입</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+    
+    
+    <div class="container">
+      <div class="sec1">
+        <h2>게임 특징</h2>
+        <div class="background">
+          <div class="select-options" id="group1">
+            <span>옵션 1</span>
+            <button class="option" value="조건1">조건1</button>
+            <button class="option" value="조건2">조건2</button>
+            <button class="option" value="조건3">조건3</button>
+            <button class="option" value="조건3">조건3</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 2</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 3</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 4</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 4</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+
+          <div class="select-options" id="group2">
+            <span>옵션 4</span>
+            <button class="option" value="조건4">조건4</button>
+            <button class="option" value="조건5">조건5</button>
+            <button class="option" value="조건6">조건6</button>
+            <button class="option" value="조건6">조건6</button>
+          </div>
+        </div>
+      </div>
+      <div class="sec2">
+        <h2>게임 소개</h2>
+        <form action="">
+          <span>게임명</span>
+          <input type="text">
+          <span>진행준비</span>
+          <textarea name="ss" id="" cols="30" rows="10"></textarea>
+          <span>게임 방법</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <span>진행 팁 / 주의사항</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <div>
+            <input type="button" value="취소하기!">
+            <input type="submit" value="등록하기!">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // 옵션 선택 시 실행될 함수
+      var groups = document.querySelectorAll(".select-options");
+      for (var i = 0; i < groups.length; i++) {
+        groups[i].addEventListener("click", function (event) {
+          var options = this.querySelectorAll(".option");
+          for (var j = 0; j < options.length; j++) {
+            options[j].classList.toggle("selected", false);
+          }
+          if (event.target.classList.contains("option")) {
+            event.target.classList.toggle("selected", true);
+          }
+        });
+      }
+
+      // 검색 버튼 클릭 시 실행될 함수
+      document
+        .getElementById("game-search")
+        .addEventListener("click", function () {
+          var 선택된옵션 = document.querySelectorAll(".selected");
+          if (선택된옵션.length > 0) {
+            var 선택된옵션값 = Array.from(선택된옵션).map(
+              (option) => option.value
+            );
+            var 결과 = "선택한 옵션: " + 선택된옵션값.join(", ");
+            document.getElementById("결과").textContent = 결과;
+          } else {
+            document.getElementById("결과").textContent =
+              "옵션을 선택해주세요.";
+          }
+        });
+
+      // 초기화 버튼 클릭 시 실행될 함수
+      document.getElementById("reset").addEventListener("click", function () {
+        // 모든 선택한 옵션들 초기화
+        var options = document.querySelectorAll(".option");
+        for (var j = 0; j < options.length; j++) {
+          options[j].classList.toggle("selected", false);
+        }
+        // 결과 영역 초기화
+        document.getElementById("결과").textContent = "";
+      });
+    </script>
+  </body>
+</html>
