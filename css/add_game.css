@@ -82,10 +82,6 @@ nav {
   font-weight: 900;
 }
 
-h2 {
-  margin-bottom: 0;
-}
-
 .container {
   display: flex;
   flex-direction: row;
@@ -103,7 +99,14 @@ h2 {
 .sec1 {
   width: 50%;
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+
+h2{
+  width: 25%;
+  padding-right: 55%;
+  margin-bottom: 0;
 }
 
 .select-options {
@@ -133,10 +136,52 @@ h2 {
 
 .sec2 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sec2 form {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: right;
+}
+
+.sec2 form span{
+  margin: 5px 0 5px 0;
+}
+
+.sec2 form input{
+  border: none;
+  border-bottom: 1px solid rgba(161,161,161, 1);
+}
+
+.sec2 form textarea{
+  resize: none;
+  border: none;
+  background-color: rgba(244,240,235,1);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.buttons{
+  margin-top: 15px;
+  padding-left: 60%;
+}
+
+.buttons input{
+  border: none;
+  width: 48%;
+  height: 35px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  border: none;
+}
+
+#submit{
+  background-color: rgba(242, 201, 196, 1);
 }
