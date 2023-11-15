@@ -140,21 +140,3 @@ h2 {
   flex-direction: column;
   justify-content: right;
 }
-
-.sec2 form textarea {
-  resize: none;
-}
-
-.buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#cancel,
-#submit {
-  border: none;
-  cursor: pointer;
-  width: 15%;
-  height: 30px;
-  border-radius: 20px;
-}
