@@ -37,7 +37,7 @@
       </ul>
     </nav>
     <hr />
-    
+
     <h2>어떤 게임을 찾고 계시나요?</h2>
     <div class="container">
       <div class="sec1">
@@ -86,8 +86,10 @@
             <img src="../img/thumbnail.png" alt="thumbnail" />
             <div class="list-info">
               <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
+                <span>게임의 제목이에요~</span>
+                <div class="heart">
+                  <img src="../img/likefull.png" alt="" /><span>65</span>
+                </div>
               </div>
               <ul class="game-info">
                 <li>
@@ -114,8 +116,10 @@
             <img src="../img/thumbnail.png" alt="thumbnail" />
             <div class="list-info">
               <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
+                <span>게임의 제목이에요~</span>
+                <div class="heart">
+                  <img src="../img/likefull.png" alt="" /><span>65</span>
+                </div>
               </div>
               <ul class="game-info">
                 <li>
@@ -142,8 +146,10 @@
             <img src="../img/thumbnail.png" alt="thumbnail" />
             <div class="list-info">
               <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
+                <span>게임의 제목이에요~</span>
+                <div class="heart">
+                  <img src="../img/likefull.png" alt="" /><span>65</span>
+                </div>
               </div>
               <ul class="game-info">
                 <li>
@@ -170,8 +176,10 @@
             <img src="../img/thumbnail.png" alt="thumbnail" />
             <div class="list-info">
               <div class="list-title">
-                <span>게임의 제목이에요~</span
-                ><div class="heart"><img src="../img/likefull.png" alt="" /><span>65</span></div>
+                <span>게임의 제목이에요~</span>
+                <div class="heart">
+                  <img src="../img/likefull.png" alt="" /><span>65</span>
+                </div>
               </div>
               <ul class="game-info">
                 <li>
@@ -193,7 +201,6 @@
               </ul>
             </div>
           </li>
-          
         </ul>
       </div>
     </div>
@@ -222,8 +229,26 @@
             var 선택된옵션값 = Array.from(선택된옵션).map(
               (option) => option.value
             );
+
+            // 선택된 옵션 값을 출력
             var 결과 = "선택한 옵션: " + 선택된옵션값.join(", ");
             document.getElementById("결과").textContent = 결과;
+
+            // 여기에 추가: 폼을 동적으로 생성하여 Django로 데이터 전송
+            var form = document.createElement("form");
+            form.action = "{% url 'search_view' %}"; // Django URL 설정에 따라 변경
+            form.method = "post";
+
+            for (var i = 0; i < 선택된옵션값.length; i++) {
+              var input = document.createElement("input");
+              input.type = "hidden";
+              input.name = "selectedOptions[]";
+              input.value = 선택된옵션값[i];
+              form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
           } else {
             document.getElementById("결과").textContent =
               "옵션을 선택해주세요.";
