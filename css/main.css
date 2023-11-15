@@ -77,10 +77,6 @@ nav {
   color: gray;
 }
 
-.bold a {
-  color: black;
-  font-weight: 900;
-}
 
 .img_wrapper {
   padding-left: 7%;
@@ -144,8 +140,8 @@ a:active {
 .img_list img.like-icon {
   width: auto;
   height: 20px;
-  margin-right: 2px;
-  padding-right: 5%;
+  margin-right: 0px;
+  padding-right:5%;
 }
 
 .img_list div {
@@ -163,6 +159,6 @@ a:active {
 }
 
 .img_list li div div {
-  width: 45px;
-  padding-right: 10px;
+  width: 40px;
+  padding-right: 13px;
 }

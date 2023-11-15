@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>함께임</title>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,8 +39,58 @@
     <hr />
 
 
+    <div class="login_wrapper">
+<div class = "img_ad">
+  <a href="#"><img src ="../img/thumbnail.png"></a>
+</div>
+
+<div class="login">
+  <p>게임 뭐 할지 고민될 때는?</p>
+  <img src="../img/title.png">
+  <form
+  method="post" 
+  action="" 
+  id="login-form">
+  <input type="email" id="email" placeholder="이메일">
+  <input type="password" id="password" placeholder="비밀번호">
+  <input type="submit" value="로그인">
+  </form>
+  <div class="info_search">
+    <p><a href="#">아이디 찾기</a></p>
+    <hr>
+    <p><a href="#">비밀번호 찾기</a></p>
+    <hr>
+    <p><a href="add_user.html">회원 가입</a></p>
+  </div>
+
+</div>
+
+</div>
     
   </body>
 
 
 </html>
+<script>
+  function login() {
+      var id = document.getElementById("email");
+      var password = document.getElementById("password");
+
+      if (id.value == "") {
+          alert("아이디를 입력해주세요.");
+          return false;
+      }
+      if (password.value == "") {
+          alert("비밀번호를 입력해주세요.");
+          return false;
+      }
+
+      //로그인 처리 코드
+      
+      // 로그인 처리 이후
+      window.location.href = "./main.html";
+      return false;
+  }
+
+  
+</script>
