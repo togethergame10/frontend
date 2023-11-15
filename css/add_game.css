@@ -94,14 +94,17 @@ h2 {
 
 .background {
   background-color: rgba(187, 215, 184, 1);
-  width: 100%;
+  width: 80%;
   padding: 7% 0 6% 0;
   margin-top: 20px;
   border-radius: 15px;
+  
 }
 
 .sec1 {
-  width: 40%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .select-options {
@@ -129,94 +132,13 @@ h2 {
   color: black;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  height: 30px;
-  align-items: center;
-  padding-top: 20px;
-  padding-right: 10px;
-}
-
-#game-search,
-#reset {
-  background-color: rgba(225, 231, 219, 1);
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  width: 18%;
-  height: 30px;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-#reset {
-  background-color: rgba(251, 217, 150, 1);
-}
 
 .sec2 {
-  width: 60%;
-  height: 80%;
+  width: 50%;
 }
 
-.sec2 ul li {
-  list-style: none;
-  display: flex;
-  margin: 1.5%;
-  justify-content: center;
-}
-
-.list-info{
-  margin-left: 3%;
-  width: 60%;
-}
-
-.list-info span {
-  font-size: 1vw;
-}
-.sec2 ul li img {
-  width: 35%;
-}
-
-.sec2 ul li div img {
-  width: 20px;
-}
-
-.list-title{
-  display: flex;
-  justify-content: space-between;
-}
-
-.game-info {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-}
-
-.game-info li {
-  width: 20%;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.sec2 form{
   display: flex;
   flex-direction: column;
-  border: 2px solid grey;
-  color: gray;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%; /* Adjusted border-radius for circles */
-  height: 4.5vw !important; /* Set your desired height */
-}
-
-
-
-.game-info li p{
-  margin: 0;
-  font-size: 1.5vw;
+  justify-content: right;
 }
