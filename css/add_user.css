@@ -92,12 +92,13 @@ nav {
 
 /*member_wrapper sign in*/
 .member_wrapper {
-    width: 35%;
+    width: 30%;
     margin: auto; 
     box-sizing: border-box; 
     float: left;
     display: flex;
     justify-content: flex-start;
+    padding-left: 5%;
 }
 
 .member_wrapper input[type="text"],
@@ -166,7 +167,6 @@ box-sizing:content-box;
     width: 60%;
     float: right;
     box-sizing: border-box;
-    padding-left: 5%;
 }
 
 #large_text {
