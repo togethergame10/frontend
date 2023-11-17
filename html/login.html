@@ -50,7 +50,9 @@
   <form
   method="post" 
   action="" 
-  id="login-form">
+  id="login-form"
+  onsubmit="return login();"
+  >
   <input type="email" id="email" placeholder="이메일">
   <input type="password" id="password" placeholder="비밀번호">
   <input type="submit" value="로그인">
@@ -66,22 +68,19 @@
 </div>
 
 </div>
-    
-  </body>
-
-
-</html>
-<script>
+<script defer>
   function login() {
-      var id = document.getElementById("email");
-      var password = document.getElementById("password");
 
-      if (id.value == "") {
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+      if (email.value == "") {
           alert("아이디를 입력해주세요.");
+          email.focus();
           return false;
       }
       if (password.value == "") {
           alert("비밀번호를 입력해주세요.");
+          password.focus();
           return false;
       }
 
@@ -90,7 +89,11 @@
       // 로그인 처리 이후
       window.location.href = "./main.html";
       return false;
-  }
+  };
 
   
 </script>
+  </body>
+
+
+</html>
