@@ -92,12 +92,13 @@ nav {
 
 /*member_wrapper sign in*/
 .member_wrapper {
-    width: 35%;
+    width: 30%;
     margin: auto; 
     box-sizing: border-box; 
     float: left;
     display: flex;
     justify-content: flex-start;
+    padding-left: 5%;
 }
 
 .member_wrapper input[type="text"],
@@ -107,6 +108,7 @@ nav {
   margin: 5px 0; /* 입력 필드 간의 간격을 조절합니다. */
   background-color: rgba(244, 240, 235, 1);
   border: none;
+  box-sizing: content-box;
 }
 
 .member_wrapper input[type="text"]::placeholder,
@@ -128,10 +130,7 @@ nav {
 }
 
 .member_wrapper input:not(input[type="radio"]) {
-  padding-right: none;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
   width: 100%;
   margin-bottom: 3px;
   border-radius: 10px;
@@ -142,6 +141,7 @@ background-color: rgba(109, 183, 177, 1);
 color:#fff;
 border: none;
 margin-top: 7px;
+box-sizing:content-box;
 }
 
 .member_wrapper input:focus {
@@ -212,8 +212,8 @@ label span {
   margin: 0;
 }
 
-hr {
-  width: 105%;
+.member_wrapper hr {
+  width: 110%;
 }
 
 .field:last-of-type{
