@@ -108,11 +108,11 @@ nav {
 
 .login p {
   color:rgba(0, 0, 0, 0.7);
-  font-size: small;
+  font-size:large;
 }
 
 .login img:first-of-type{
-  width: 7vh;
+  width: 10vh;
 }
 
 .login input[type=submit]{
