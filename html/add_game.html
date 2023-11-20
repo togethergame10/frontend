@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>함께임</title>
     <link rel="stylesheet" href="../css/add_game.css" />
+    <script src="../script/add_game.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -93,15 +94,15 @@
       </div>
       <div class="sec2">
         <h2>게임 소개</h2>
-        <form action="">
+        <form id="gameForm" action="{% url 'your_form_submission_url' %}" method="post">
           <span>게임명</span>
           <input type="text" />
           <span>진행준비</span>
-          <textarea name="ss" id="" cols="30" rows="4"></textarea>
+          <textarea name="ss" id="" cols="30" rows="5"></textarea>
           <span>게임 방법</span>
-          <textarea name="" id="" cols="30" rows="4"></textarea>
+          <textarea name="" id="" cols="30" rows="5"></textarea>
           <span>진행 팁 / 주의사항</span>
-          <textarea name="" id="" cols="30" rows="8"></textarea>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
           <div class="buttons">
             <input type="button" value="취소하기!" id="cancel" />
             <input type="submit" value="등록하기!" id="submit" />
@@ -109,49 +110,5 @@
         </form>
       </div>
     </div>
-
-    <script>
-      // 옵션 선택 시 실행될 함수
-      var groups = document.querySelectorAll(".select-options");
-      for (var i = 0; i < groups.length; i++) {
-        groups[i].addEventListener("click", function (event) {
-          var options = this.querySelectorAll(".option");
-          for (var j = 0; j < options.length; j++) {
-            options[j].classList.toggle("selected", false);
-          }
-          if (event.target.classList.contains("option")) {
-            event.target.classList.toggle("selected", true);
-          }
-        });
-      }
-
-      // 검색 버튼 클릭 시 실행될 함수
-      document
-        .getElementById("game-search")
-        .addEventListener("click", function () {
-          var 선택된옵션 = document.querySelectorAll(".selected");
-          if (선택된옵션.length > 0) {
-            var 선택된옵션값 = Array.from(선택된옵션).map(
-              (option) => option.value
-            );
-            var 결과 = "선택한 옵션: " + 선택된옵션값.join(", ");
-            document.getElementById("결과").textContent = 결과;
-          } else {
-            document.getElementById("결과").textContent =
-              "옵션을 선택해주세요.";
-          }
-        });
-
-      // 초기화 버튼 클릭 시 실행될 함수
-      document.getElementById("reset").addEventListener("click", function () {
-        // 모든 선택한 옵션들 초기화
-        var options = document.querySelectorAll(".option");
-        for (var j = 0; j < options.length; j++) {
-          options[j].classList.toggle("selected", false);
-        }
-        // 결과 영역 초기화
-        document.getElementById("결과").textContent = "";
-      });
-    </script>
   </body>
 </html>
