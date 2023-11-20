@@ -126,13 +126,14 @@ h2 {
   padding-top: 1vh;
   display:flex;
   flex-direction: column;
+  text-align: center;
   width: 2vw;
 }
 
 .rank img {
   min-width: 1.7vw;
   max-width: 1.7vw;
-  padding-left:0 !important;
+  padding-left: 0.2vw !important;
 }
 
 .list-info span {
