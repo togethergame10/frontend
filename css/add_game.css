@@ -153,6 +153,7 @@ h2{
 
 .sec2 form input{
   border: none;
+  background: none;
   border-bottom: 1px solid rgba(161,161,161, 1);
 }
 
