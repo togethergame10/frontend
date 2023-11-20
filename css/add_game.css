@@ -94,6 +94,29 @@ nav {
   padding: 7% 0 6% 0;
   margin-top: 20px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.select-name{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.select-name span{
+  margin-bottom: 10px;
+}
+
+.select-buttons input{
+  width: 30%;
+  border-radius: 15px;
+  border: none;
+  background: rgba(251, 249, 246, 1);
+  height: 18px;
+  padding: 7px;
 }
 
 .sec1 {
@@ -112,8 +135,8 @@ h2{
 .select-options {
   display: flex;
   justify-content: space-between;
+  padding: 0 5% 0 0;
   margin-bottom: 10px;
-  padding: 0 7% 0 7%;
 }
 
 .option {
@@ -121,7 +144,7 @@ h2{
   border: none;
   border-radius: 20px;
   padding: 8px;
-  width: 18%;
+  width: 23%;
   height: 30px;
   align-items: center;
   display: flex;
@@ -153,6 +176,7 @@ h2{
 
 .sec2 form input{
   border: none;
+  background: none;
   border-bottom: 1px solid rgba(161,161,161, 1);
 }
 
