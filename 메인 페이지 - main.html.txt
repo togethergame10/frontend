@@ -5,6 +5,7 @@
 게임 검색 페이지 - search.html (만약 오류 생기면 search_game.html)
 게임 등록 페이지 - add_game.html
 등록 수정 페이지 - fix.html
+담은 게임(playlist) 페이지 -save_game.html
 게임별 상세 페이지 - more_game.html
 마이페이지 - mypage.html
 로그인 - login.html
