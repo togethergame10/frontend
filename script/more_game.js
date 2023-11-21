@@ -9,15 +9,38 @@ function toggleLike() {
   likeImage.src = isLiked ? "../img/likefull.png" : "../img/like.png";
 }
 
+function deletePost() {
+  if (confirm("게시글을 삭제하시겠습니까??") == true) {
+    //확인
+
+    document.removefrm.submit();
+  } else {
+    //취소
+
+    return false;
+  }
+}
+
 function openModal() {
-  console.log("모달 열기 함수 호출됨");
   var modal = document.getElementById("myModal");
   modal.style.display = "flex"; // 모달 표시
-  console.log("모달 표시 스타일:", modal.style.display);
 }
 
 function closeModal() {
-  console.log("Close modal function called");
   var modal = document.getElementById("myModal");
   modal.style.display = "none"; // Hide the modal
+}
+
+function toggleButtonText(playlistId) {
+  var button = document.getElementById(playlistId).nextElementSibling; // 형제 요소인 button
+  var buttonText = button.innerText;
+
+  // 텍스트를 변경하고 원래대로 되돌리기
+  if (buttonText === "선택") {
+    button.innerText = "취소";
+    button.style.cssText = "background-color:rgba(122, 159, 118, 1)";
+  } else {
+    button.innerText = "선택";
+    button.style.cssText = "background-color:rgba(187, 215, 184, 1))";
+  }
 }
