@@ -24,7 +24,7 @@
 
     <nav>
       <ul class="nav-list">
-        <li ><a href="main.html">인기 게임</a></li>
+        <li><a href="main.html">인기 게임</a></li>
         <li><a href="search.html">게임 검색</a></li>
         <li class="bold"><a href="add_game.html">게임 등록</a></li>
         <li><a href="mypage.html">마이페이지</a></li>
@@ -53,41 +53,40 @@
           <div class="select-buttons">
             <div class="select-options" id="group1">
               <span>최소</span>
-              <input type="text">
+              <input type="text" />
               <span>최대</span>
-              <input type="text">
-
+              <input type="text" />
             </div>
 
             <div class="select-options" id="group2">
               <span>최소</span>
-              <input type="text">
+              <input type="text" />
               <span>최대</span>
-              <input type="text">
+              <input type="text" />
             </div>
 
-            <div class="select-options" id="group2">
+            <div class="select-options" id="group3">
               <button class="option" value="전체">전체</button>
               <button class="option" value="MT">MT</button>
               <button class="option" value="내기">내기</button>
               <button class="option" value="기타">기타</button>
             </div>
 
-            <div class="select-options" id="group2">
+            <div class="select-options" id="group4">
               <button class="option" value="전체">전체</button>
               <button class="option" value="실내">실내</button>
               <button class="option" value="야외">야외</button>
               <button class="option" value="온라인">온라인</button>
             </div>
 
-            <div class="select-options" id="group2">
+            <div class="select-options" id="group5">
               <button class="option" value="전체">전체</button>
               <button class="option" value="퀴즈">퀴즈</button>
               <button class="option" value="순발력">순발력</button>
               <button class="option" value="두뇌게임">두뇌게임</button>
             </div>
-  
-            <div class="select-options" id="group2">
+
+            <div class="select-options" id="group6">
               <button class="option" value="전체">전체</button>
               <button class="option" value="최신순">최신순</button>
               <button class="option" value="인기순">인기순</button>
@@ -98,8 +97,11 @@
       </div>
       <div class="sec2">
         <h2>게임 소개</h2>
-        <form id="gameForm" action="{% url 'your_form_submission_url' %}" method="post">
-
+        <form
+          id="gameForm"
+          action="{% url 'your_form_submission_url' %}"
+          method="post"
+        >
           <span>게임명</span>
           <input type="text" />
           <span>진행준비</span>
