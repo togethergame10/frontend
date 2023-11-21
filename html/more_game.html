@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/more_game.css" />
+    <script src="../script/more_game.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -60,13 +67,16 @@
             </li>
           </ul>
           <div class="buttons">
-            <button><img src="../img/graylike.png" alt="좋아요" />65</button>
-            <button class="playlist-button">
+            <button id="likeButton" onclick="toggleLike()">
+              <img src="../img/like.png" alt="좋아요" />65
+            </button>
+            <button class="playlist-button" onclick="openModal()">
               <img src="../img/folder.png" alt="담기" />담기
             </button>
           </div>
         </div>
       </div>
+
       <div class="sec2">
         <div class="sec2-wrapper">
           <div class="about-game">
@@ -84,6 +94,13 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <div class="modal-title">PlayList 선택</div>
       </div>
     </div>
   </body>
