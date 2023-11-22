@@ -153,7 +153,9 @@ nav {
 }
 
 .save-game-element li img {
-  width: 40%;
+  width: 20vw;
+  height: 11vw;
+  object-fit: cover;
 }
 
 .save-game-info {
@@ -177,6 +179,8 @@ nav {
 
 .save-game-buttons img {
   width: 30px !important;
+  height: 30px !important;
+  object-fit: contain;
 }
 
 /* Add this to your existing CSS or create a new CSS file */
