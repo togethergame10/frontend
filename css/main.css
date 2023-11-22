@@ -86,9 +86,9 @@ nav {
 
 
 .img_wrapper {
-  padding-left: 7%;
-  padding-right: 7%;
-  width: 86%;
+  padding-left: 5.6vw;
+  padding-right: 5.6vw;
+  width: 69.8vw;
 }
 
 .img_wrapper p {
@@ -123,13 +123,14 @@ nav {
 }
 
 .img_list li {
-  width: 100%;
+  width: 17.45vw;
 }
 
 .img_list img {
-  width: 96%;
-  height: auto;
+  width: 16.75vw;
+  height: 9.15vw;
   margin-top: 0%;
+  object-fit: cover;
 }
 
 a {
