@@ -98,6 +98,7 @@ nav {
   max-width: 97%;
   padding-top: 15px;
   padding-left: 15px;
+  object-fit: cover;
 }
 
 .login {
