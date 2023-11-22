@@ -71,10 +71,8 @@
             </div>
 
             <div class="select-options" id="group2">
-              <button class="option" value="전체">전체</button>
               <button class="option" value="최신순">최신순</button>
               <button class="option" value="인기순">인기순</button>
-              <button class="option" value="가나다순">가나다순</button>
             </div>
           </div>
         </div>
@@ -88,7 +86,7 @@
         <ul>
           <a href="../html/more_game.html">
             <li>
-              <img src="../img/thumbnail.png" alt="thumbnail" />
+              <img src="../img/title.png" alt="thumbnail" />
               <div class="list-info">
                 <div class="list-title">
                   <span>게임의 제목이에요~</span>
@@ -195,11 +193,11 @@
                 <ul class="game-info">
                   <li>
                     <span>인원</span>
-                    <p>전체</p>
+                    <p>15~35명</p>
                   </li>
                   <li>
                     <span>인원</span>
-                    <p>전체</p>
+                    <p>2분~130분</p>
                   </li>
                   <li>
                     <span>인원</span>
@@ -274,8 +272,21 @@
         for (var j = 0; j < options.length; j++) {
           options[j].classList.toggle("selected", false);
         }
-        // 결과 영역 초기화
-        document.getElementById("결과").textContent = "";
+
+        // '전체' 버튼과 '최신순' 버튼만 선택
+        var allOptions = document.querySelectorAll(
+          '.select-options button[value="전체"]'
+        );
+        var latestOption = document.querySelector(
+          '.select-options button[value="최신순"]'
+        );
+
+        for (var k = 0; k < allOptions.length; k++) {
+          allOptions[k].classList.toggle("selected", true);
+        }
+
+        // 최신순 버튼을 선택
+        latestOption.classList.toggle("selected", true);
       });
     </script>
   </body>
