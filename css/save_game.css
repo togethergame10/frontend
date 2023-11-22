@@ -91,15 +91,30 @@ nav {
 }
 
 .save-game-title {
-  width: 20%;
+  margin-top: 2%;
+  width: 25%;
+}
+
+.save-game-title-wrapper {
+  padding: 0 15%;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-game-title-wrapper span {
+  font-size: larger;
 }
 
 .save-game-element {
+  margin-top: 2%;
   display: flex;
-  width: 80%;
+  width: 75%;
 }
 .save-game-element ul {
   padding: 0;
+  margin: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
