@@ -52,23 +52,35 @@
           </div>
           <div class="select-buttons">
             <div class="select-options" id="group1">
-              <span>최소</span>
-              <input type="text" />
-              <span>최대</span>
-              <input type="text" />
+              <div class="option-wrapper">
+                <span>최소</span>
+                <input type="text" />
+                <span>명</span>
+              </div>
+              <div class="option-wrapper">
+                <span>최대</span>
+                <input type="text" />
+                <span>명</span>
+              </div>
             </div>
 
             <div class="select-options" id="group2">
-              <span>최소</span>
-              <input type="text" />
-              <span>최대</span>
-              <input type="text" />
+              <div class="option-wrapper">
+                <span>최소</span>
+                <input type="text" />
+                <span>분</span>
+              </div>
+              <div class="option-wrapper">
+                <span>최대</span>
+                <input type="text" />
+                <span>분</span>
+              </div>
             </div>
 
             <div class="select-options" id="group3">
               <button class="option" value="전체">전체</button>
               <button class="option" value="MT">MT</button>
-              <button class="option" value="내기">내기</button>
+              <button class="option" value="술게임">술게임</button>
               <button class="option" value="기타">기타</button>
             </div>
 
@@ -85,13 +97,6 @@
               <button class="option" value="순발력">순발력</button>
               <button class="option" value="두뇌게임">두뇌게임</button>
             </div>
-
-            <div class="select-options" id="group6">
-              <button class="option" value="전체">전체</button>
-              <button class="option" value="최신순">최신순</button>
-              <button class="option" value="인기순">인기순</button>
-              <button class="option" value="가나다순">가나다순</button>
-            </div>
           </div>
         </div>
       </div>
@@ -105,11 +110,22 @@
           <span>게임명</span>
           <input type="text" />
           <span>진행준비</span>
-          <textarea name="ss" id="" cols="30" rows="3"></textarea>
+          <textarea name="ss" id="" cols="30" rows="2"></textarea>
           <span>게임 방법</span>
           <textarea name="" id="" cols="30" rows="4"></textarea>
           <span>진행 팁 / 주의사항</span>
-          <textarea name="" id="" cols="30" rows="5"></textarea>
+          <textarea name="" id="" cols="30" rows="3"></textarea>
+          <span>썸네일 이미지</span>
+          <div class="filebox">
+            <input
+              class="upload-name"
+              value="첨부파일"
+              placeholder="첨부파일"
+            />
+            <label for="file">파일찾기</label>
+            <input type="file" id="file" />
+            <button type="button" id="cancelFile">첨부 취소</button>
+          </div>
           <div class="buttons">
             <input type="button" value="취소하기!" id="cancel" />
             <input type="submit" value="등록하기!" id="submit" />
