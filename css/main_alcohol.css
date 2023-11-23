@@ -145,6 +145,11 @@ h2 {
   color: rgba(232, 82, 82, 1);
 }
 
+.sec2 ul a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 
 .thumbnail {
   width: 18.75vw;

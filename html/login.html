@@ -53,7 +53,7 @@
   id="login-form"
   onsubmit="return login();"
   >
-  <input type="email" id="email" placeholder="이메일">
+  <input type="text" id="text" placeholder="이메일">
   <input type="password" id="password" placeholder="비밀번호">
   <input type="submit" value="로그인">
   </form>
@@ -71,11 +71,11 @@
 <script defer>
   function login() {
 
-    var email = document.getElementById("email");
+    var text = document.getElementById("text");
     var password = document.getElementById("password");
-      if (email.value == "") {
+      if (text.value == "") {
           alert("아이디를 입력해주세요.");
-          email.focus();
+          text.focus();
           return false;
       }
       if (password.value == "") {
