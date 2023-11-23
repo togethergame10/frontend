@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function deletePost() {
   if (confirm("게시글을 삭제하시겠습니까??") == true) {
     //확인
-
+    event.preventDefault();
     document.removefrm.submit();
   } else {
     //취소
-
+    event.preventDefault();
     return false;
   }
 }
@@ -75,9 +75,11 @@ function copyLink(button) {
     document.body.removeChild(tempInput);
 
     // Optionally, provide some feedback to the user
+    event.preventDefault();
     alert("링크가 클립보드에 복사되었습니다.");
   } else {
     // If the button is not inside an <a> element
+    event.preventDefault();
     alert("링크를 복사할 수 없습니다.");
   }
 }
