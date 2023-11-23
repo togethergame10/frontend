@@ -178,9 +178,9 @@ nav {
 }
 
 .save-game-buttons img {
-  width: 30px !important;
-  height: 30px !important;
-  object-fit: contain;
+  width: 25px !important;
+  height: 25px !important;
+  object-fit: contain !important;
 }
 
 /* Add this to your existing CSS or create a new CSS file */
@@ -299,6 +299,7 @@ label,
   height: 30px;
   align-items: center;
   margin-left: 10px;
+  font-size: small;
 }
 
 .filebox input[type="file"] {
