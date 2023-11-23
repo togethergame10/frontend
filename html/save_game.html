@@ -143,7 +143,17 @@
               required
             />
             <span class="span-text">썸네일 이미지</span>
-            <input type="file" name="" id="" />
+            <div class="filebox">
+              <input
+                class="upload-name"
+                value="첨부파일"
+                placeholder="첨부파일"
+              />
+              <label for="file">파일 찾기</label>
+              <input type="file" id="file" />
+              <button type="button" id="cancelFile">첨부 취소</button>
+            </div>
+
             <button type="submit">만들기</button>
           </form>
         </div>

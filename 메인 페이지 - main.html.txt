@@ -10,3 +10,4 @@
 마이페이지 - mypage.html
 로그인 - login.html
 회원가입 - add_user.html
+플리 상세 - more_playlist.html
