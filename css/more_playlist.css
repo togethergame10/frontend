@@ -1,0 +1,209 @@
+@media (hover: hover) {
+  html {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+html {
+  background-color: rgba(251, 249, 246, 1);
+}
+
+* {
+  font-family: "IBM Plex Sans KR";
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 5vh 0 5vh;
+}
+
+.nav-wrapper a img {
+  width: 10vh;
+}
+
+.search {
+  width: 35%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  width: calc(
+    100% - 40px
+  ); /* Adjusted width to accommodate the button and image */
+  background-color: rgba(251, 249, 246, 1);
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.search button {
+  position: absolute;
+  right: 20px; /* Adjusted right position */
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search img {
+  width: 20px;
+}
+
+nav {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list {
+  list-style-type: none;
+  padding: 0%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.nav-list a {
+  padding: 0 20px 0 20px;
+  font-weight: 700;
+  color: gray;
+}
+
+.bold a {
+  color: black;
+  font-weight: 900;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sec1 {
+  width: 32%;
+  padding: 0 1.5%;
+}
+
+.playlist-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.playlist-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playlist-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.playlist-buttons button img {
+  width: 25px;
+  object-fit: contain;
+}
+
+.playlist-thumbnail img {
+  width: 25vw;
+  height: 14vw;
+  object-fit: cover;
+}
+
+.sec2 {
+  width: 65%;
+  padding-top: 8%;
+}
+
+.sec2 ul {
+  padding: 0%;
+}
+
+.sec2 ul a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.sec2 ul li {
+  list-style: none;
+  display: flex;
+  margin: 1.5%;
+  justify-content: center;
+}
+
+.list-info {
+  margin-left: 3%;
+  width: 60%;
+}
+
+.list-info span {
+  font-size: 1vw;
+}
+.sec2 ul li img {
+  width: 16vw;
+  height: 9vw;
+  object-fit: cover;
+}
+
+.sec2 ul li div img {
+  width: 20px !important;
+  height: 18px;
+  object-fit: contain;
+}
+
+.list-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-info li {
+  width: 5.5vw;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid grey;
+  color: gray;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Adjusted border-radius for circles */
+  height: 5vw !important; /* Set your desired height */
+}
+
+.game-info li p {
+  margin: 0;
+  font-size: 1.2vw;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
