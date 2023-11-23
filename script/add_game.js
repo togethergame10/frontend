@@ -81,3 +81,42 @@ document
     // 기본 제출 동작 방지
     event.preventDefault();
   });
+
+// Get the file input element
+var fileInput = document.getElementById("file");
+
+// Get the upload-name input element
+var uploadNameInput = document.querySelector(".upload-name");
+
+// Add a change event listener to the file input
+fileInput.addEventListener("change", function () {
+  // Get the selected file
+  var selectedFile = fileInput.files[0];
+
+  // Set the value of the upload-name input to the file name
+  if (selectedFile) {
+    uploadNameInput.value = selectedFile.name;
+  } else {
+    // If no file is selected, clear the upload-name input
+    uploadNameInput.value = "";
+  }
+});
+
+// Get the file input element
+var fileInput = document.getElementById("file");
+
+// Get the upload-name input element
+var uploadNameInput = document.querySelector(".upload-name");
+
+// Get the cancelFile button
+var cancelFileButton = document.getElementById("cancelFile");
+
+// Add a click event listener to the cancelFile button
+cancelFileButton.addEventListener("click", function () {
+  // Reset the file input by cloning and replacing it
+  var newFileInput = fileInput.cloneNode(true);
+  fileInput.parentNode.replaceChild(newFileInput, fileInput);
+
+  // Clear the upload-name input
+  uploadNameInput.value = "";
+});
