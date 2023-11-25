@@ -51,11 +51,19 @@
             <button onclick="deletePlaylist()">
               <img src="../img/trash.png" alt="제거" />
             </button>
+            <div class="create-playlist">
+              <button>
+                <img src="../img/fix.png" alt="수정">
+              </button>
+            </div>
           </div>
         </div>
         <div class="playlist-thumbnail">
           <img src="../img/thumbnail.png" alt="플리썸네일" />
         </div>
+        
+        <button id="addButton" onclick="toggleButtonText()">내 Playlist에 추가하기</button>
+        
       </div>
       <div class="sec2">
         <ul>
@@ -187,6 +195,40 @@
             </li>
           </a>
         </ul>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-elements">
+          <h2>PlayList 수정</h2>
+          <form id="playlistForm">
+            <label for="playlistName">Playlist 제목</label>
+            <input
+              type="text"
+              id="playlistName"
+              name="playlistName"
+              placeholder="제목을 입력하세요"
+              required
+            />
+            <span class="span-text">썸네일 이미지</span>
+            
+              
+              <div class="filebox">
+                <input
+                  class="upload-name"
+                  value="첨부파일"
+                  placeholder="첨부파일"
+                />
+                <button type="button" id="cancelFile">첨부 취소</button>
+                <label for="file">파일 찾기</label>
+                <input type="file" id="file" />
+            </div>
+
+            <button type="submit">수정 완료</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
